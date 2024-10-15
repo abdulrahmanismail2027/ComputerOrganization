@@ -26,6 +26,7 @@ void loop() {
 int debounceDigitalRead(int pin) {
   int previousButtonState = digitalRead(button), currentButtonState;
   for (int i = 0; i < debounceFactor; i++) {
+    delay(1);
     currentButtonState = digitalRead(button);
     if (previousButtonState != currentButtonState) {
       i = 0;
